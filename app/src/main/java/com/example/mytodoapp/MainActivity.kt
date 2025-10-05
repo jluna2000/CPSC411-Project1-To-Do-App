@@ -86,7 +86,7 @@ fun Screen(modifier: Modifier){
         modifier = Modifier.fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        NewTask(modifier = modifier, taskText = text, onClick = { tasks.add(TaskBlockStatus(nextId++, false, text.value)) })
+        NewTask(modifier = modifier, taskText = text, onClick = { tasks.add(TaskBlockStatus(nextId++, false, text.value.trim())) })
         Text(
             "To Do",
             style = MaterialTheme.typography.headlineLarge,
